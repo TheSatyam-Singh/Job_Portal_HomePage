@@ -1,0 +1,163 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial;
+	background: #f7fbff;
+	color: #0f172a;
+	line-height: 1.5;
+	padding: 24px;
+}
+
+table:first-of-type {
+	width: 100%;
+	margin-bottom: 12px;
+}
+
+table:first-of-type td {
+	vertical-align: middle;
+	padding: 6px;
+}
+
+table:first-of-type img {
+	display: block;
+}
+
+table:first-of-type a {
+	color: #2563eb;
+	text-decoration: none;
+	font-weight: 600;
+	margin-left: 8px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 1.6rem;
+	margin: 8px 0;
+}
+
+.card-container {
+	max-width: 480px;
+	margin: 36px auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+.card-title {
+	text-align: center;
+	font-size: 1.25rem;
+	margin-bottom: 12px;
+	color: #0b1220;
+	font-weight: 600;
+}
+.form-label {
+	display: block;
+	margin-bottom: 6px;
+	font-weight: 600;
+	color: #0b1220;
+}
+.form-input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #e6eefb;
+	border-radius: 8px;
+	background: #fff;
+	margin-bottom: 12px;
+}
+.btn {
+	display: inline-block;
+	width: 100%;
+	padding: 10px 14px;
+	background: #2563eb;
+	color: #fff;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	font-weight: 600;
+	text-align: center;
+}
+.btn:hover {
+	background: #1f57c7;
+}
+
+p {
+	text-align: center;
+	color: #475569;
+	margin: 0;
+}
+
+table[width="60%"] {
+	width: 60%;
+	margin: 18px auto;
+	background: #fff;
+	padding: 12px;
+	border-radius: 12px;
+	box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+	border-collapse: separate;
+	border-spacing: 8px;
+}
+
+table[width="60%"] td {
+	padding: 6px;
+}
+
+table[width="60%"] input[type="text"],
+table[width="60%"] select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #e6eefb;
+	border-radius: 8px;
+	background: #fff;
+}
+
+table[width="60%"] button {
+	padding: 10px 14px;
+	background: #2563eb;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+table[width="60%"] button:hover {
+	background: #1f57c7;
+}
+
+table[width="80%"] {
+	width: 80%;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+table[width="80%"] td {
+	padding: 14px;
+	text-align: center;
+}
+
+table[width="80%"] img {
+	max-width: 160px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+table[width="100%"]:last-of-type td {
+	padding-top: 18px;
+	text-align: center;
+	color: #6b7280;
+	font-size: 0.95rem;
+}
+
+.muted {
+	color: #6b7280;
+}
+
