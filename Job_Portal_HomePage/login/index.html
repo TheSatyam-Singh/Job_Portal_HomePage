@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login - Job Portal</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main class="auth-page">
+    <div class="card-container auth-card">
+      <img src="../naukri_logo.svg" alt="Job Portal" class="auth-logo" width="120" />
+      <div class="card-title">Sign in</div>
+      <p class="muted" style="text-align:center;margin-bottom:12px">Access your account to find new opportunities</p>
+
+      <form id="loginForm" action="#" method="post">
+        <label class="form-label">Email</label>
+        <input id="loginEmail" class="form-input" type="email" name="email" required>
+
+        <label class="form-label">Password</label>
+        <input id="loginPassword" class="form-input" type="password" name="password" required>
+
+        <button id="loginBtn" class="btn" type="submit">Login</button>
+      </form>
+
+      <div class="auth-actions">
+        <a href="#" class="secondary-link">Forgot password?</a>
+      </div>
+
+      <div id="loginMessage" class="muted" style="text-align:center;margin-top:12px"></div>
+
+      <p style="text-align:center;margin-top:12px">Don't have an account? <a href="../register/index.html">Register</a></p>
+    </div>
+  </main>
+
+  <script type="module" src="/auth.js"></script>
+</body>
+</html>

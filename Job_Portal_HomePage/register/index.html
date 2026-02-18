@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Register - Job Portal</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main class="auth-page">
+    <div class="card-container auth-card">
+      <img src="../naukri_logo.svg" alt="Job Portal" class="auth-logo" width="120" />
+      <div class="card-title">Create account</div>
+      <p class="muted" style="text-align:center;margin-bottom:12px">Join now and start applying to top companies</p>
+
+      <form id="registerForm" action="#" method="post">
+        <label class="form-label">Full name</label>
+        <input id="fullname" class="form-input" type="text" name="fullname" required>
+
+        <label class="form-label">Email</label>
+        <input id="email" class="form-input" type="email" name="email" required>
+
+        <label class="form-label">Password</label>
+        <input id="password" class="form-input" type="password" name="password" required>
+
+        <label class="form-label">Confirm password</label>
+        <input id="passwordConfirm" class="form-input" type="password" name="passwordConfirm" required>
+
+        <button id="registerBtn" class="btn" type="submit">Register</button>
+      </form>
+
+      <div class="auth-actions">
+        <a href="#" class="secondary-link">Password requirements: min 6 characters</a>
+      </div>
+
+      <div id="registerMessage" class="muted" style="text-align:center;margin-top:12px"></div>
+
+      <p style="text-align:center;margin-top:12px">Already registered? <a href="../login/index.html">Sign in</a></p>
+    </div>
+  </main>
+
+  <script type="module" src="/auth.js"></script>
+</body>
+</html>

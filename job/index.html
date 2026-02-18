@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naukri Clone Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="logo">Naukri</div>
+        <nav class="nav-links">
+          <a href="#jobs">Jobs</a>
+          <a href="#companies">Companies</a>
+          <a href="#services">Services</a>
+        </nav>
+        <div class="top-actions">
+          <button class="ghost">For Employers</button>
+          <button class="primary">Sign In</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="jobs">
+          <div class="hero-content">
+            <p class="eyebrow">India's trusted career marketplace</p>
+            <h1>
+              Land a high-growth role
+              <span>with the freshest openings</span>
+            </h1>
+            <p class="lead">
+              Filter 2.4 lakh+ verified openings, upload your resume, and get
+              matched with recruiters who are hiring now.
+            </p>
+
+            <form class="job-search" aria-label="Job search form">
+              <label class="sr-only" for="keyword">Keyword</label>
+              <input
+                type="text"
+                id="keyword"
+                placeholder="Job title, skill, or company"
+              />
+              <label class="sr-only" for="location">Location</label>
+              <input type="text" id="location" placeholder="City or pin code" />
+              <button type="submit" class="primary">Search Jobs</button>
+            </form>
+
+            <div class="hero-actions">
+              <button class="primary">Upload Resume</button>
+              <button class="ghost">View Hiring Companies</button>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <strong>2.4L+</strong>
+                <span>live jobs</span>
+              </div>
+              <div>
+                <strong>1.1L+</strong>
+                <span>recruiters</span>
+              </div>
+              <div>
+                <strong>94%</strong>
+                <span>response rate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-illustration">
+            <div class="bubble top"></div>
+            <div class="bubble bottom"></div>
+            <div class="card">
+              <p class="card-label">Featured Hiring</p>
+              <h3>Product Designer • Chennai</h3>
+              <p class="card-meta">Design, Product • ₹18-28 LPA</p>
+              <p class="card-desc">
+                Lead a cross-platform design team building tools for Bharat
+                fintech users.
+              </p>
+              <button class="ghost small">Apply Now</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="highlights" id="services">
+          <article>
+            <h3>Smart Match</h3>
+            <p>AI-powered recommendations tailor every day of your hunt.</p>
+          </article>
+          <article>
+            <h3>Instant Connect</h3>
+            <p>Message recruiters and get updates directly inside the app.</p>
+          </article>
+          <article>
+            <h3>Profile Booster</h3>
+            <p>Highlight verified skills and add media-rich project stories.</p>
+          </article>
+        </section>
+
+        <section class="grid" id="companies">
+          <header>
+            <p class="eyebrow">Hiring now</p>
+            <h2>Explore roles by industry</h2>
+          </header>
+          <div class="grid-cards">
+            <article>
+              <span class="pill">Product</span>
+              <h3>Product Managers</h3>
+              <p>30+ roles from unicorns and in-house startups.</p>
+            </article>
+            <article>
+              <span class="pill">Tech</span>
+              <h3>Engineering</h3>
+              <p>Remote-friendly teams across AI, infra, and platform.</p>
+            </article>
+            <article>
+              <span class="pill">Design</span>
+              <h3>Design & Research</h3>
+              <p>Build inclusive experiences for 300M+ users.</p>
+            </article>
+            <article>
+              <span class="pill">Sales</span>
+              <h3>Business Development</h3>
+              <p>Grow enterprise partnerships across India.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="process">
+          <header>
+            <p class="eyebrow">Start fast</p>
+            <h2>Three steps to a better offer</h2>
+          </header>
+          <div class="process-steps">
+            <article>
+              <div class="step-number">01</div>
+              <h3>Create a profile</h3>
+              <p>Showcase verified skills, experience, and assessments.</p>
+            </article>
+            <article>
+              <div class="step-number">02</div>
+              <h3>Get matched</h3>
+              <p>Recruiters discover you via premium bets and searches.</p>
+            </article>
+            <article>
+              <div class="step-number">03</div>
+              <h3>Interview with confidence</h3>
+              <p>Receive prep kits, resume tips, and scheduling nudges.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="testimonial">
+          <div>
+            <p class="eyebrow">Candidate story</p>
+            <h2>"I found a dream role within two weeks"</h2>
+            <p>
+              "Naukri's curated alerts and instant recruiter chat helped me move
+              from a regional firm to a Mumbai product team." - Ananya, Product
+              Designer
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <p class="card-meta">Explore similar moves</p>
+            <ul>
+              <li>Fresher-friendly tech grad roles</li>
+              <li>Work-from-home customer success</li>
+              <li>Analytics roles in Bangalore</li>
+            </ul>
+            <button class="ghost small">See Stories</button>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>
+          <h3>Naukri for Jobs</h3>
+          <p>Trusted by 50M+ job seekers and 2M+ hirers.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Help</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

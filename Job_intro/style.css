@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height:200%;
+    width:100%;
+    /*background-image: url("https://images.stockcake.com/public/9/2/8/9287c2ab-6588-4acb-bcf9-99a322fd575b_large/nighttime-speeding-car-stockcake.jpg");
+    background-size: cover;*/
+    display: flex;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#div1{
+    border:3px solid red;
+    height:100px;
+    width:100px;
+    margin:10px;
+}
+
+#div2{
+    top:0;
+    border:3px solid blue;
+    height:100px;
+    width:100px;
+    margin:10px;
+}
+
+#div3{
+    border:3px solid green;
+    height:100px;
+    width:100px;
+    margin:10px;
+}

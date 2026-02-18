@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Postingss - Find Your Dream Job</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table width="100%" cellpadding="15">
+        <tr>
+            <td width="30%">
+                <img src="naukri_logo.svg" alt="Naukri.com Logo" width="150" onclick="window.location.href='/'">
+            </td>
+            <td align="right">
+                    <a href="/login" >Login</a> |
+                    <a href="/register" >Register</a>
+            </td>
+        </tr>
+    </table>
+    <h1>Job Postings</h1>
+    <div class="job-container">
+        <form id="job-form">
+            <input type="text" id="job-title" placeholder="Job Title">
+            <input type="text" id="company-name" placeholder="Company Name">
+            <input type="text" id="location" placeholder="Job Location">
+            <input type="text" id="job-role" placeholder="Job Role">
+            <button type="submit" id="search-button">Submit</button>
+        </form>
+    </div>
+
+    <div class="job-list" id="joblist">
+        <h2>Available Jobs</h2>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Job Portal is your gateway to finding the perfect career opportunity. Connect with top companies hiring today.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#jobs">Browse Jobs</a></li>
+                    <li><a href="#companies">Top Companies</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">IT Jobs</a></li>
+                    <li><a href="#">Data Science</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Finance</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:support@jobportal.com">support@jobportal.com</a></p>
+                <p>Phone: +91 99999-99999</p>
+                <p>Address: Chandigarh, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Job Portal - Satyam Singh. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

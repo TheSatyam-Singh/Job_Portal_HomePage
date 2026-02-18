@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto;
+    background: #f7fbff;
+    color: #0f172a;
+    padding: 24px;
+}
+
+/* Title */
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Job Form */
+
+.job-container {
+    max-width: 520px;
+    margin: 0 auto 50px auto;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+#job-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#job-form input {
+    padding: 11px 14px;
+    border: 1px solid #e6eefb;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+}
+
+#job-form input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#job-form button {
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#job-form button:hover {
+    background: #1f57c7;
+}
+
+/* Job List */
+
+.job-list {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+}
+
+.job-list h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+}
+
+/* Job Card */
+
+.job-card {
+    background: #ffffff;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    border: 1px solid #f1f5f9;
+    transition: 0.25s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+}
+
+.job-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.job-card p {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+/* Delete Button */
+
+.job-card .delete-btn {
+    margin-top: 14px;
+    padding: 8px 14px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.job-card .delete-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* Footer Styles */
+.footer {
+	background: #f8fafc;
+	color: #0f172a;
+	margin-top: 60px;
+	border-top: 1px solid #e6eefb;
+	margin-left: -24px;
+	margin-right: -24px;
+	padding-left: 24px;
+	padding-right: 24px;
+	box-shadow: 0 -2px 12px rgba(15,23,42,0.04);
+}
+
+.footer-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 30px;
+	padding: 40px 24px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.footer-section h4 {
+	margin-bottom: 15px;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.footer-section p {
+	text-align: left;
+	margin-bottom: 10px;
+	line-height: 1.6;
+}
+
+.footer-section ul {
+	list-style: none;
+	padding: 0;
+}
+
+.footer-section ul li {
+	margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+	color: #475569;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.footer-bottom {
+	background: transparent;
+	padding: 20px;
+	text-align: center;
+	border-top: 1px solid #e6eefb;
+}
+
+.footer-bottom p {
+	color: #475569;
+	margin: 0;
+	text-align: center;
+}
+
