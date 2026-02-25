@@ -14,8 +14,8 @@
                 <img src="/naukri_logo.svg" alt="Naukri.com Logo" width="150" onclick="window.location.href='/'">
             </td>
             <td align="right">
-                    <a href="/login" >Login</a> |
-                    <a href="/register" >Register</a>
+                    <a href="/login/index.html" >Login</a> |
+                    <a href="/register/index.html" >Register</a>
             </td>
         </tr>
     </table>
@@ -25,6 +25,13 @@
             <input type="text" id="job-title" placeholder="Job Title">
             <input type="text" id="company-name" placeholder="Company Name">
             <input type="text" id="location" placeholder="Job Location">
+            <select id="experience">
+                <option value="" disabled selected>Experience Required</option>
+                <option value="Fresher">Fresher</option>
+                <option value="1-3 Years">1-3 Years</option>
+                <option value="3-5 Years">3-5 Years</option>
+                <option value="5+ Years">5+ Years</option>
+            </select>
             <input type="text" id="job-role" placeholder="Job Descriptions">
             <button type="submit" id="submit-button">Add Job</button>
         </form>

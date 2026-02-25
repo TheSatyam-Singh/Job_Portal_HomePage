@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/jobs", "destination": "/jobs/index.html" },
+    { "source": "/jobs/search", "destination": "/jobs/search/index.html" },
+    { "source": "/jobs/apply", "destination": "/jobs/apply/index.html" },
+    { "source": "/login", "destination": "/login/index.html" },
+    { "source": "/register", "destination": "/register/index.html" },
+    { "source": "/apply", "destination": "/apply/index.html" }
+  ]
+}
