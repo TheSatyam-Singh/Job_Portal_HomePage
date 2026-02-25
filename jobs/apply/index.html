@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Apply</title>
+    <link rel="stylesheet" href="/apply/apply.css">
+    <link rel="icon" HREF="../favicon.ico" TYPE="image/x-icon">
+    <script src="/apply/apply.js" defer></script>
+
+</head>
+<body class="apply-page">
+    <table width="100%" cellpadding="15">
+        <tr>
+            <td width="30%">
+                <a href="../index.html"><img src="../naukri_logo.svg" alt="Job Portal" width="140"></a>
+            </td>
+            <td align="right">
+                    <a href="../index.html">Home</a> |
+                    <a href="../jobs/index.html">Jobs</a> |
+                    <a href="../login/index.html">Login</a> |
+                    <a href="../register/index.html">Register</a>
+            </td>
+        </tr>
+    </table>
+
+    <main class="auth-page">
+    <div class="card-container apply-container">
+        <h1>Applying for Job</h1>
+        <div class="apply-grid">
+            <aside class="company-panel" id="company-panel">
+                <div class="company-card">
+                    <img id="company-logo" class="company-logo" src="" alt="company logo" onerror="this.style.display='none'">
+                    <h3 id="company-title">Job Title</h3>
+                    <p id="company-name" class="muted">Company</p>
+                    <p id="company-role"></p>
+                    <p id="company-location"></p>
+                    <p id="posted-info" class="muted" style="margin-top:12px;font-size:0.95rem"></p>
+                </div>
+            </aside>
+
+            <div class="apply-right">
+                <div class="card-container" style="padding:16px;">
+                    <h2 style="margin-bottom:12px">Application</h2>
+                    <form id="apply-form">
+                        <label class="form-label" for="name">Full Name</label>
+                        <input class="form-input" type="text" id="name" name="name" required>
+
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" type="email" id="email" name="email" required>
+
+                        <label class="form-label" for="resume">Resume</label>
+                        <input class="form-input" type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                        <div id="resume-info" class="muted" style="margin-top:6px;margin-bottom:12px"></div>
+
+                        <button id="submit-application" class="btn" type="submit">
+                            <span class="btn-spinner" aria-hidden></span>
+                            <span class="btn-label">Submit Application</span>
+                            <span class="btn-check" aria-hidden>✓</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </main>
+    </body>
+    </html>

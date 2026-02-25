@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Search Jobs</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      background: #f4f9fc;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .card-container {
+      max-width: 720px;
+      margin: 20 auto 48px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 28px 28px 40px;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+      border: 1px solid rgba(15, 23, 42, 0.04);
+    }
+
+    .search-box {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid #e6eefb;
+      font-size: 0.98rem;
+      background: #fbfdff;
+    }
+
+    .search-box button {
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    #results {
+      margin-top: 4px;
+    }
+
+    #results h2 {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 1.2rem;
+    }
+
+    #results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .job-card {
+      padding: 22px;
+      border-radius: 12px;
+    }
+
+    .card-inner {
+      align-items: center;
+      gap: 18px;
+    }
+
+    .company-logo {
+      width: 128px;
+      height: 128px;
+    }
+
+    .job-actions {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 720px) {
+      .card-container {
+        margin: 12px;
+        padding: 18px;
+      }
+
+      .search-box {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .search-box input {
+        width: 100%;
+      }
+
+      .search-box button {
+        width: 100%;
+      }
+    }
+</style>
+</head>
+<body>
+  <header style="display:flex;align-items:center;justify-content:space-between;">
+    <img src="../../naukri_logo.svg" alt="Logo" width="150" onclick="window.location.href='../../'">
+    <h1>Search Jobs</h1>
+    <nav style="display:flex;gap:20px;font-weight:600;">
+      <a href="/jobs">Jobs</a>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    </nav>
+  </header>
+
+  <div class="card-container">
+    <div class="search-box">
+      <input id="search-keyword" type="text" placeholder="Skills, title, company">
+      <input id="search-location" type="text" placeholder="Location">
+      <button id="search-btn">Search</button>
+    </div>
+
+    <div id="results" class="job-list">
+      <h2>Results</h2>
+      <div id="results-list"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom"><p>&copy; 2026 Job Portal - Satyam Singh</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

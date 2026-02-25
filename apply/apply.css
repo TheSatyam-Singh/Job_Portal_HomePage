@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+	--card-bg: #ffffff;
+	--muted: #6b7280;
+	--accent: #2563eb;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial;
+	color: #0f172a;
+	background: #f7fbff;
+}
+
+
+.auth-page {
+	min-height: calc(100vh - 48px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 12px;
+}
+
+body.apply-page {
+	overflow-y: auto
+}
+
+.apply-container {
+	max-width: 1100px;
+	width: calc(100% - 48px);
+	max-height: calc(100vh - 120px);
+	min-height: 420px;
+	margin: 18px auto;
+	padding: 18px;
+	border-radius: 14px;
+}
+
+table[width="100%"] {
+	margin-bottom: 12px;
+}
+
+
+.apply-container.card-container {
+	max-width: 1100px;
+	margin: 36px auto;
+	padding: 36px;
+	background: var(--card-bg);
+	border-radius: 16px;
+	box-shadow: 0 18px 48px rgba(15, 23, 42, 0.06);
+}
+
+.apply-container h1 {
+	font-size: 1.5rem;
+	margin-bottom: 18px
+}
+
+
+.apply-grid {
+	display: grid;
+	grid-template-columns: 320px 1fr;
+	gap: 18px;
+	align-items: start;
+	height: auto
+}
+
+.company-card {
+	background: linear-gradient(180deg, #fff, #fbfdff);
+	border-radius: 12px;
+	padding: 14px;
+	box-shadow: 0 8px 28px rgba(15, 23, 42, 0.04);
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start
+}
+
+.company-card .company-logo {
+	width: 96px;
+	height: 96px;
+	object-fit: contain;
+	display: block;
+	margin: 0 0 14px
+}
+
+.company-card h3 {
+	font-size: 1.05rem;
+	margin: 0 0 6px;
+	color: #0b1220
+}
+
+.company-card .muted {
+	color: var(--muted);
+	margin: 6px 0
+}
+
+.company-card p {
+	margin: 6px 0;
+	color: #374151
+}
+
+.apply-right .card-container {
+	max-width: 100%;
+	padding: 14px;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+	display: flex;
+	flex-direction: column
+}
+
+.apply-right h2 {
+	margin: 0 0 10px;
+	font-size: 1.15rem
+}
+
+.form-label {
+	display: block;
+	font-weight: 700;
+	margin-bottom: 8px
+}
+
+.apply-right form {
+	display: flex;
+	flex-direction: column
+}
+
+.form-input {
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid #eef6ff;
+	background: #fff;
+	margin-bottom: 10px;
+	width: 100%
+}
+
+textarea.form-input {
+	min-height: 100px
+}
+
+.btn {
+	background: var(--accent);
+	color: #ffffff;
+	border: none;
+	border-radius: 10px;
+	padding: 12px 14px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background 200ms ease;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+}
+
+.btn:hover {
+	background: #1d4ed8;
+}
+
+.btn:active {
+	background: #1e40af;
+}
+
+.apply-right .btn {
+	width: 100%;
+	margin-top: 16px;
+	padding: 14px 16px;
+	font-size: 1rem;
+}
+
+
+input[type="file"].form-input {
+	padding: 6px
+}
+
+
+table[width="100%"] {
+	margin-bottom: 8px;
+}
+
+
+.btn {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn-spinner {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	border-top-color: rgba(255, 255, 255, 0.95);
+	margin-right: 8px;
+	vertical-align: middle;
+	opacity: 0;
+	transform: scale(0.8);
+	transition: opacity 160ms, transform 160ms;
+}
+
+.btn .btn-check {
+	display: none;
+	font-size: 16px;
+	margin-left: 6px;
+}
+
+.btn.loading .btn-spinner {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.btn.loading .btn-label {
+	opacity: 0.01
+}
+
+.btn.success {
+	background: #16a34a !important;
+}
+
+.btn.success .btn-label {
+	display: none
+}
+
+.btn.success .btn-spinner {
+	display: none
+}
+
+.btn.success .btn-check {
+	display: inline-block;
+	transform: scale(0);
+	animation: pop 360ms ease forwards;
+}
+
+@keyframes pop {
+	from {
+		transform: scale(0.2);
+		opacity: 0
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1
+	}
+}
+
+
+.company-card,
+.apply-right .card-container {
+	line-height: 1.5
+}
+
+@media (max-width:900px) {
+	.apply-container.card-container {
+		padding: 20px;
+		margin: 20px
+	}
+
+	.apply-grid {
+		grid-template-columns: 1fr
+	}
+
+	.company-card {
+		margin-bottom: 12px
+	}
+}

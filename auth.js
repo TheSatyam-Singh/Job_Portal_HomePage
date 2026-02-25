@@ -1,16 +1,10 @@
-// auth.js - Firebase Email/Password auth (modular SDK)
-// Place Firebase config in /firebase-config.json (so secrets are not hardcoded in JS).
-// 1) Create a Firebase project and enable Email/Password auth in Authentication
-// 2) Add your Firebase config values to firebase-config.json
-
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, sendEmailVerification } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
 import { getFirestore, doc, setDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
 
-let auth = null; // will be set after config is loaded
+let auth = null;
 
-// Helpers
 function showMessage(elId, msg, isError = false) {
   const el = document.getElementById(elId);
   if (!el) return;
@@ -24,7 +18,6 @@ function clearMessage(elId) {
   el.textContent = '';
 }
 
-// Load firebase config from JSON
 async function loadConfig() {
   try {
     const res = await fetch('/firebase-config.json', { cache: 'no-store' });
@@ -36,7 +29,6 @@ async function loadConfig() {
   }
 }
 
-// Initialize Firebase and wire up forms
 async function startAuth() {
   const cfg = await loadConfig();
   if (!cfg) {
@@ -47,14 +39,12 @@ async function startAuth() {
   try {
     const app = initializeApp(cfg);
     auth = getAuth(app);
-    // Initialize Firestore (optional)
     try { var db = getFirestore(app); } catch (e) { console.warn('Firestore init failed', e); db = null; }
   } catch (err) {
     console.error('Firebase initialization failed', err);
     return;
   }
 
-  // Register flow
   const registerForm = document.getElementById('registerForm');
   if (registerForm) {
     registerForm.addEventListener('submit', async (e) => {
@@ -83,14 +73,11 @@ async function startAuth() {
 
       try {
         const userCred = await createUserWithEmailAndPassword(auth, email, password);
-        // Set display name
         if (name) {
           await updateProfile(userCred.user, { displayName: name });
         }
-        // Optionally send verification email
-        try { await sendEmailVerification(userCred.user); } catch (err) { /* ignore */ }
+        try { await sendEmailVerification(userCred.user); } catch (err) {}
 
-        // Save basic profile to Firestore if available
         if (typeof db !== 'undefined' && db) {
           try {
             await setDoc(doc(db, 'users', userCred.user.uid), {
@@ -115,7 +102,6 @@ async function startAuth() {
     });
   }
 
-  // Login flow
   const loginForm = document.getElementById('loginForm');
   if (loginForm) {
     loginForm.addEventListener('submit', async (e) => {
@@ -144,8 +130,6 @@ async function startAuth() {
   }
 }
 
-// start
 startAuth();
 
-// Export a getter in case other modules need auth after init
 export function getAuthInstance() { return auth; }
